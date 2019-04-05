@@ -2,5 +2,16 @@
      User Global Variables
 *******************************/
 
-@primaryColor   : @pink;
-@pink           : #FF1493;
+@primaryColor   : @red;
+@secondaryColor : @grey;
+
+@red : #FD5750;
+
+
+@pageBackground : @pageGrey;
+
+
+
+@pageGrey: #F7F7F7;
+
+@fontFamily: 'soleil,sans-serif';
