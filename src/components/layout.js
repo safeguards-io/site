@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import MainMenu from "./main_menu"
+import SEO from "./seo"
 
 import {
   Container
@@ -17,7 +18,7 @@ import {
 
 import "./layout.css"
 
-const Layout = ({ active, children }) => (
+const Layout = ({ title, active, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -30,6 +31,7 @@ const Layout = ({ active, children }) => (
     `}
     render={data => (
       <>
+        <SEO title={title} keywords={[`gatsby`, `application`, `react`]} />
         <MainMenu active={active}/>
         <Container>
           <main>{children}</main>

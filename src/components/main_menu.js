@@ -4,26 +4,27 @@ import React from "react"
 import { navigate } from "gatsby"
 
 import {
-  Menu
+  Menu,
+  Container
 } from 'semantic-ui-react'
 
 const MainMenu = ({active}) => (
-  <Menu inverted fixed='top' borderless pointing secondary size='large'>
-    {
-      [
-        {title: 'home', link: '/'},
-        {title: 'safeguards', link: '/safeguards'},
-      ].map((page)=>
-        <Menu.Item
-          key={page.title}
-          onClick={()=>{navigate(page.link)}}
-          active={active === page.link}
-        >
-          {page.title}
-        </Menu.Item>
-      )
-    }
-  </Menu>
+    <Menu inverted fixed='top' borderless pointing secondary size='large'>
+      {
+        [
+          {title: 'Home', link: '/'},
+          {title: 'Registry', link: '/safeguards'},
+        ].map((page)=>
+          <Menu.Item
+            key={page.title}
+            onClick={()=>{navigate(page.link)}}
+            active={active === page.link}
+          >
+            {page.title}
+          </Menu.Item>
+        )
+      }
+    </Menu>
 )
 
 // Menu.propTypes = {

@@ -7,14 +7,13 @@ import {
   Container,
   Header,
   Card,
-  Image,
   Label
 } from 'semantic-ui-react'
 
 import "semantic-ui-less/semantic.less";
 
 const IndexPage = () => (
-  <Layout active={'/safeguards'}>
+  <Layout active='/safeguards' title="Registry">
     <StaticQuery
       query={graphql`
           query {
@@ -37,7 +36,10 @@ const IndexPage = () => (
       render={data => (
         <>
           <Container>
-            <Header as="h1">Safeguards</Header>
+            <Header as="h1">
+              Registry
+              <Header.Subheader>List of all available safeguards.</Header.Subheader>
+            </Header>
             <Card.Group itemsPerRow={3}>
               {data.allMarkdownRemark.edges.map((edge) => {
                 const meta = edge.node.frontmatter
