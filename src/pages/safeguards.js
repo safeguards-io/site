@@ -7,8 +7,7 @@ import {
   Container,
   Header,
   Segment,
-  Label,
-  Button
+  Label
 } from 'semantic-ui-react'
 
 import "semantic-ui-less/semantic.less";
@@ -48,7 +47,6 @@ const IndexPage = () => (
                     {meta.provisioner}
                   </Label>
                   <div><strong>ID</strong>: {meta.id}</div>
-                  <Button primary>Try</Button>
                 </Segment>)
             })}
           </Container>
