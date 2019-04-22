@@ -1,10 +1,10 @@
 ---
 path: "/safeguards/terraform/aws/ec2/allowed-availability-zones"
-title: "availability zones"
+title: "Allowed Availability Zones"
 id: terraform/aws/allowed-ec2-availability-zones
 provisioner: terraform
-terraform_provider: aws
-resource: aws_instance
+provider: aws
+description: Restrict the allowed availability zones for EC2 instances
 ---
 
 # Availability Zones

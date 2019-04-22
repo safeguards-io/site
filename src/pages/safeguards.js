@@ -6,8 +6,7 @@ import { StaticQuery, graphql } from "gatsby"
 import {
   Container,
   Header,
-  Segment,
-  Label
+  Card
 } from 'semantic-ui-react'
 
 import "semantic-ui-less/semantic.less";
@@ -24,8 +23,8 @@ const IndexPage = () => (
                   frontmatter {
                     title
                     provisioner
+                    description
                     path
-                    id
                   }
                 }
               }
@@ -36,19 +35,19 @@ const IndexPage = () => (
         <>
           <Container>
             <Header as="h1">Safeguards</Header>
-            {data.allMarkdownRemark.edges.map((edge) => {
-              const meta = edge.node.frontmatter
-              return(
-                <Segment key={meta.id}>
-                  <Header as="h2">
-                    {meta.title}
-                  </Header>
-                  <Label as='a' color='purple' ribbon>
-                    {meta.provisioner}
-                  </Label>
-                  <div><strong>ID</strong>: {meta.id}</div>
-                </Segment>)
-            })}
+            <Card.Group itemsPerRow={3}>
+              {data.allMarkdownRemark.edges.map((edge) => {
+                const meta = edge.node.frontmatter
+                return(
+                  <Card key={meta.id} raised>
+                    <Card.Content>
+                      <Card.Header>{meta.title}</Card.Header>
+                      <Card.Meta>{meta.provisioner}</Card.Meta>
+                      <Card.Description>{meta.description}</Card.Description>
+                    </Card.Content>
+                  </Card>)
+              })}
+            </Card.Group>
           </Container>
         </>
       )}
