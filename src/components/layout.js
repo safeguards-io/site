@@ -9,9 +9,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
+import MainMenu from "./main_menu"
+
+import {
+  Container
+} from 'semantic-ui-react'
+
 import "./layout.css"
 
-const Layout = ({ children }) => (
+const Layout = ({ active, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,7 +30,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <main>{children}</main>
+        <MainMenu active={active}/>
+        <Container>
+          <main>{children}</main>
+        </Container>
       </>
     )}
   />

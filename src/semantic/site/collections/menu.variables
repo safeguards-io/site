@@ -1,3 +1,9 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+
+@secondaryPointingInvertedActiveBorderColor: @primaryColor;
+
+@secondaryPointingInvertedItemTextColor: #888;
+@secondaryPointingInvertedItemHeaderColor: #888;
