@@ -9,8 +9,6 @@ import {
 
 const MainMenu = ({active}) => (
   <Menu inverted fixed='top' borderless pointing secondary size='large'>
-    <Menu.Item>
-    </Menu.Item>
     {
       [
         {title: 'home', link: '/'},

@@ -1,6 +1,6 @@
 ---
 path: "/safeguards/terraform/aws/ec2/allowed-availability-zones"
-title: "Allowed Availability Zones"
+title: "Allowed availability zones"
 id: terraform/aws/allowed-ec2-availability-zones
 provisioner: terraform
 provider: aws

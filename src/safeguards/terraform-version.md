@@ -1,6 +1,6 @@
 ---
 path: "/safeguards/terraform/version"
-title: "Terraform Version"
+title: "Terraform version"
 id: terraform/version
 provisioner: terraform
 description: Restrict the Terraform versions which can be used for provisioning
