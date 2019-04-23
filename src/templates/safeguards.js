@@ -11,7 +11,8 @@ import {
   Segment,
   Header,
   Grid,
-  Image
+  Image,
+  Divider
 } from 'semantic-ui-react'
 
 const logos = {
@@ -37,25 +38,40 @@ export default function Template({
             {meta.title}
             <Header.Subheader>{meta.description}</Header.Subheader>
           </Header>
-          <div>provisioner: {meta.provisioner}</div>
-          <div>provider: {meta.provider}</div>
+          <div>provisioner: <strong>{meta.provisioner}</strong></div>
+          <div>provider: <strong>{meta.provider}</strong></div>
           <div>source: <a href={meta.source}>{meta.source}</a> (<a href={meta.issues}>report an issue</a>)</div>
         </Grid.Column>
       </Grid>
-
+      <Divider />
       <Grid>
         <Grid.Column width={10}>
+          <Header as="h2">Readme</Header>
           <Segment>
             <div dangerouslySetInnerHTML={{ __html: html }}/>
           </Segment>
         </Grid.Column>
         <Grid.Column width={6}>
+          <Header as='h2'>Usage</Header>
           <Segment>
-            <Header as='h4'>Usage instructions</Header>
-              
+            Create a file called <code>.safeguards.yml</code> in  your working directory which
+            contains your terraform configuration. Add this content:
+            <pre style={{backgroundColor: '#F8F8F8', padding: '5px', border: 'solid 1px #DDDDDD'}}><code>
+{meta.provisioner && `provisioners:
+- source: ${meta.provisioner}
 
+`}
+{`policies:
+  my-policy:
+    safeguard: ${meta.id}
+    settings:
+    # settings from readme`}
+            </code></pre>
+            Now you can check that your terraform configuration complies with this policy by
+            running:
+            <pre style={{backgroundColor: '#F8F8F8', padding: '5px', border: 'solid 1px #DDDDDD'}}><code>{`npx @safeguards/safeguards check`}</code></pre>
           </Segment>
-        </Grid.Column>
+        </Grid.Column>       
       </Grid>
     </Layout>
   )
@@ -66,6 +82,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
+        id
         path
         title
         description
