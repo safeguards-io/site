@@ -5,6 +5,8 @@ id: terraform/aws/allowed-ec2-availability-zones
 provisioner: terraform
 provider: aws
 description: Restrict the allowed availability zones for EC2 instances
+source: https://github.com/safeguards-io/safeguards/blob/master/src/safeguards/terraform/aws/allowed-ec2-availability-zones.js
+issues: https://github.com/safeguards-io/safeguards/issues/new
 ---
 
 # Availability Zones

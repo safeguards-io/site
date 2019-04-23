@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 import {
   Container,
@@ -44,7 +44,7 @@ const IndexPage = () => (
               {data.allMarkdownRemark.edges.map((edge) => {
                 const meta = edge.node.frontmatter
                 return(
-                  <Card key={meta.id} raised>
+                  <Card key={meta.id} href={meta.path}>
                     <Card.Content>
                       <Card.Header>
                       <Label attached='top right' color='purple'> terraform</Label>

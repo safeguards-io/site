@@ -4,8 +4,7 @@ import React from "react"
 import { navigate } from "gatsby"
 
 import {
-  Menu,
-  Container
+  Menu
 } from 'semantic-ui-react'
 
 const MainMenu = ({active}) => (
