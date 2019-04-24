@@ -56,7 +56,7 @@ export default function Template({
           <Segment>
             Create a file called <code>.safeguards.yml</code> in  your working directory which
             contains your terraform configuration. Add this content:
-            <pre style={{backgroundColor: '#F8F8F8', padding: '5px', border: 'solid 1px #DDDDDD'}}><code>
+            <pre style={{backgroundColor: '#F8F8F8', padding: '5px', border: 'solid 1px #DDDDDD', overflow:'auto'}}><code>
 {meta.provisioner && `provisioners:
 - source: ${meta.provisioner}
 
