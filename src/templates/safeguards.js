@@ -28,7 +28,7 @@ export default function Template({
   const { html } = markdownRemark
   const meta = data.markdownRemark.frontmatter
   return (
-    <Layout active='/safeguards'>
+    <Layout active='/safeguards' title={meta.title}>
       <Grid>
         <Grid.Column width={2}>
           <Image src={logos[meta.provider || 'default']} size='medium'/>
