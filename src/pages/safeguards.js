@@ -7,10 +7,20 @@ import {
   Container,
   Header,
   Card,
-  Label
+  Image
 } from 'semantic-ui-react'
 
 import "semantic-ui-less/semantic.less";
+
+import awsLogo from "../images/aws.png";
+import defaultLogo from "../images/logo.png";
+import terraformLogo from "../images/terraform.png"
+
+const logos = {
+  aws: awsLogo,
+  terraform: terraformLogo,
+  default: defaultLogo,
+}
 
 const IndexPage = () => (
   <Layout active='/safeguards' title="Registry">
@@ -26,6 +36,7 @@ const IndexPage = () => (
                     title
                     provisioner
                     description
+                    provider
                     path
                   }
                 }
@@ -46,12 +57,10 @@ const IndexPage = () => (
                 return(
                   <Card key={meta.id} href={meta.path}>
                     <Card.Content>
-                      <Card.Header>
-                      <Label attached='top right' color='purple'> terraform</Label>
-                        {meta.title}
-                      </Card.Header>
+                      <Image floated='left' src={logos[meta.provider || 'default']} size='mini'/>
+                      <Card.Header>{meta.title}</Card.Header>
                       <Card.Meta>
-                        {meta.id}
+                        <strong>provider</strong>: {meta.provider}
                       </Card.Meta>
                       <Card.Description>{meta.description}</Card.Description>
                     </Card.Content>

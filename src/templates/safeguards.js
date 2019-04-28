@@ -12,7 +12,8 @@ import {
   Header,
   Grid,
   Image,
-  Divider
+  Divider,
+  Icon
 } from 'semantic-ui-react'
 
 const logos = {
@@ -35,6 +36,7 @@ export default function Template({
         </Grid.Column>
         <Grid.Column width={14}>
           <Header as="h1">
+            <Header.Subheader href='/safeguards'><Icon name='angle left'/>Registry</Header.Subheader>
             {meta.title}
             <Header.Subheader>{meta.description}</Header.Subheader>
           </Header>
