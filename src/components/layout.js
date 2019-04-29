@@ -16,9 +16,9 @@ import {
   Container
 } from 'semantic-ui-react'
 
-import "./layout.css"
+import "./layout.css.less"
 
-const Layout = ({ title, active, children }) => (
+const Layout = ({ title, active, children, contained }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -30,19 +30,29 @@ const Layout = ({ title, active, children }) => (
       }
     `}
     render={data => (
-      <>
-        <SEO title={title} keywords={[`gatsby`, `application`, `react`]} />
+      <div className='main'>
+        <SEO title={title || 'Safeguards'} keywords={[`gatsby`, `application`, `react`]} />
         <MainMenu active={active}/>
-        <Container>
-          <main>{children}</main>
-        </Container>
-      </>
+        {contained &&
+          <Container>
+            <main>{children}</main>
+          </Container>
+        }
+        {!contained && 
+          children
+        }
+      </div>
     )}
   />
 )
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  contained: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  contained: true,
 }
 
 export default Layout

@@ -4,14 +4,19 @@ import React from "react"
 import { navigate } from "gatsby"
 
 import {
-  Menu
+  Menu,
+  Icon,
+  Container
 } from 'semantic-ui-react'
 
 const MainMenu = ({active}) => (
     <Menu inverted fixed='top' borderless pointing secondary size='large'>
+      <Container>
       {
         [
           {title: 'Home', link: '/'},
+          {title: 'Get started', link: '#'},
+          {title: 'Use cases', link: '#'},
           {title: 'Registry', link: '/safeguards'},
         ].map((page)=>
           <Menu.Item
@@ -23,6 +28,17 @@ const MainMenu = ({active}) => (
           </Menu.Item>
         )
       }
+        <Menu.Menu position='right'>
+        <Menu.Item>
+            <Icon name='book'/>
+            Docs
+          </Menu.Item>
+          <Menu.Item>
+            <Icon name='github'/>
+            Github
+          </Menu.Item>
+        </Menu.Menu>
+      </Container>
     </Menu>
 )
 
