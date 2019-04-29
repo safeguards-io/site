@@ -35,10 +35,10 @@ const IndexPage = () => (
     </div>
     
     <Container className='features'>
-      <Grid columns={4} textAlign='center'>
+      <Grid columns={4} textAlign='center' relaxed='very'>
         <Grid.Row>
           <Grid.Column>
-            <div style={{margin:'auto', width: '50%', paddingLeft: '15px'}}>
+            <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
               <Segment circular style={{width: 90, height: 90}} raised>
                 <Icon name='code' size='large' />
               </Segment>
@@ -47,7 +47,7 @@ const IndexPage = () => (
             <div style={{textAlign: 'left'}}>deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</div>
           </Grid.Column>
           <Grid.Column>
-            <div style={{margin:'auto', width: '50%', paddingLeft: '15px'}}>
+            <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
               <Segment circular style={{width: 90, height: 90}} raised>
                 <Icon name='lock' size='large' />
               </Segment>
@@ -56,16 +56,16 @@ const IndexPage = () => (
             <div style={{textAlign: 'left'}}>magni dolores eos qui ratione voluptatem sequi nesciunt</div>
           </Grid.Column>
           <Grid.Column>
-            <div style={{margin:'auto', width: '50%', paddingLeft: '15px'}}>
+            <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
               <Segment circular style={{width: 90, height: 90}} raised>
-                <Icon name='battery full' size='large' />
+                <Icon name='certificate' size='large' />
               </Segment>
             </div>
-            <Header as='h2'>Out-of-the-box policies</Header>
+            <Header as='h2'>Certified policies</Header>
             <div style={{textAlign: 'left'}}>ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</div>
           </Grid.Column>
           <Grid.Column>
-            <div style={{margin:'auto', width: '50%', paddingLeft: '15px'}}>
+            <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
               <Segment circular style={{width: 90, height: 90}} raised>
                 <Icon name='plug' size='large' />
               </Segment>
@@ -76,7 +76,7 @@ const IndexPage = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <div style={{margin:'auto', width: '50%', paddingLeft: '15px'}}>
+            <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
               <Segment circular style={{width: 90, height: 90}} raised>
                 <Icon name='cogs' size='large' />
               </Segment>
@@ -85,7 +85,7 @@ const IndexPage = () => (
             <div style={{textAlign: 'left'}}>voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</div>
           </Grid.Column>
           <Grid.Column>
-            <div style={{margin:'auto', width: '50%', paddingLeft: '15px'}}>
+            <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
               <Segment circular style={{width: 90, height: 90}} raised>
                 <Icon name='shipping fast' size='large'/>
               </Segment>
@@ -94,21 +94,21 @@ const IndexPage = () => (
             <div style={{textAlign: 'left'}}>necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis</div>
           </Grid.Column>
           <Grid.Column>
-            <div style={{margin:'auto', width: '50%', paddingLeft: '15px'}}>
+            <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
               <Segment circular style={{width: 90, height: 90}} raised>
-                <Icon name='question circle' size='large' />
+                <Icon name='globe' size='large' />
               </Segment>
             </div>
-            <Header as='h2'>???</Header>
+            <Header as='h2'>Centrally managed</Header>
             <div style={{textAlign: 'left'}}>dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia</div>
           </Grid.Column>
           <Grid.Column>
-            <div style={{margin:'auto', width: '50%', paddingLeft: '15px'}}>
+            <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
               <Segment circular style={{width: 90, height: 90}} raised>
                 <Icon name='question circle' size='large' />
               </Segment>
             </div>
-            <Header as='h2'>???</Header>
+            <Header as='h2'>Support & Services</Header>
             <div style={{textAlign: 'left'}}> quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et </div>
           </Grid.Column>
         </Grid.Row>
