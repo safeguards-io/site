@@ -44,7 +44,7 @@ const IndexPage = () => (
               </Segment>
             </div>
             <Header as='h2'>Policy-as-code</Header>
-            <div style={{textAlign: 'left'}}>deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</div>
+            <div style={{textAlign: 'left'}}>Treat your safeguards like code. Manage policies and configurations  like code, including reviews &  approval workflow, testing, and history.</div>
           </Grid.Column>
           <Grid.Column>
             <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
@@ -62,7 +62,7 @@ const IndexPage = () => (
               </Segment>
             </div>
             <Header as='h2'>Certified policies</Header>
-            <div style={{textAlign: 'left'}}>ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</div>
+            <div style={{textAlign: 'left'}}>Safeguards comes with a wide range of certified project templates and certified policies so you can start validating your configurations right out of the box.</div>
           </Grid.Column>
           <Grid.Column>
             <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
@@ -71,7 +71,7 @@ const IndexPage = () => (
               </Segment>
             </div>
             <Header as='h2'>Extensible</Header>
-            <div style={{textAlign: 'left'}}> molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga</div>
+            <div style={{textAlign: 'left'}}>Every safeguard is configurable. If that isn’t enough you can create custom safeguards.</div>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -91,7 +91,7 @@ const IndexPage = () => (
               </Segment>
             </div>
             <Header as='h2'>CI/CD Ready!</Header>
-            <div style={{textAlign: 'left'}}>necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis</div>
+            <div style={{textAlign: 'left'}}>Safeguards CLI returns standard error codes, formatted output, and has minimal dependencies so you can integrate it into your existing CI/CD workflow with just a single additional step.</div>
           </Grid.Column>
           <Grid.Column>
             <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
@@ -100,7 +100,7 @@ const IndexPage = () => (
               </Segment>
             </div>
             <Header as='h2'>Centrally managed</Header>
-            <div style={{textAlign: 'left'}}>dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia</div>
+            <div style={{textAlign: 'left'}}>You can manage your policies and custom safeguards from a central repository and so you can validate all of projects across your organization from a central source.</div>
           </Grid.Column>
           <Grid.Column>
             <div style={{margin:'auto', width: '50%', paddingLeft: '10px'}}>
