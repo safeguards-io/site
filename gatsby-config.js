@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-tawk`,
       options: {
-        tawkId: "Y5cc92523d07d7e0c63915d7e",
+        tawkId: "5cc92523d07d7e0c63915d7e",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
