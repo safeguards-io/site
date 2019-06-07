@@ -59,19 +59,16 @@ export default function Template({
             Create a file called <code>.safeguards.yml</code> in  your working directory which
             contains your terraform configuration. Add this content:
             <pre style={{backgroundColor: '#F8F8F8', padding: '5px', border: 'solid 1px #DDDDDD', overflow:'auto'}}><code>
-{meta.provisioner && `provisioners:
-- source: ${meta.provisioner}
 
-`}
-{`policies:
-  my-policy:
+{`
+  - name: my policy
     safeguard: ${meta.id}
     settings:
     # settings from readme`}
             </code></pre>
             Now you can check that your terraform configuration complies with this policy by
             running:
-            <pre style={{backgroundColor: '#F8F8F8', padding: '5px', border: 'solid 1px #DDDDDD'}}><code>{`npx @safeguards/safeguards check`}</code></pre>
+            <pre style={{backgroundColor: '#F8F8F8', padding: '5px', border: 'solid 1px #DDDDDD'}}><code>{`npx @safeguards/safeguards`}</code></pre>
           </Segment>
         </Grid.Column>       
       </Grid>
