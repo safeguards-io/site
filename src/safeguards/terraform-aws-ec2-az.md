@@ -21,15 +21,11 @@ zone on an EC2 instance is optional; onlyl instances with the `availability_zone
 This example requires that all EC2 instance are provisioned in us-east-1a... us-east-1c.
 
 ```
-provisioners:
-- source: default/terraform
-
-policies:
-  must-use-us-east-1-azs:
-    safeguard: terraform/aws/allowed-ec2-availability-zones
-    settings:
-      allowed:
-      - us-east-1a
-      - us-east-1b
-      - us-east-1c
+- name: Must use us-east-1 availability zones
+  safeguard: terraform/aws/allowed-ec2-availability-zones
+  settings:
+    allowed:
+    - us-east-1a
+    - us-east-1b
+    - us-east-1c
 ```

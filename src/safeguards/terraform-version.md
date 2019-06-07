@@ -14,7 +14,7 @@ identify the terraform version which was used to generate the plan.
 
 ## Settings
 
-- `range` (required) - A version range as defined by the [node-semver module](https://github.com/npm/node-semver#ranges).
+A version range as defined by the [node-semver module](https://github.com/npm/node-semver#ranges).
 
 
 ## Example
@@ -22,12 +22,8 @@ identify the terraform version which was used to generate the plan.
 **.safeguards.yml**
 
 ```yaml
-provisioners:
-- source: default/terraform
-
-policies:
-  must-use-version-0.12:
-    safeguard: terraform/version
-    settings:
-      range: ">= 0.12.0-beta2"
+- name: Must use Terraform version 0.12
+  safeguard: terraform/version
+  settings:
+    range: ">= 0.12.0-beta2"
 ```

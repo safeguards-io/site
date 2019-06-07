@@ -26,15 +26,11 @@ or the prviate module registry in Terraform Enterprise. Modules which are loaded
 
 
 ```yaml
-provisioners:
-- source: default/terraform
-
-policies:
-  only-hashicorp-aws-modules:
-    safeguard: terraform/allowed-modules
-    settings:
-      allowed:
-        - hashicorp/nomad/aws
-        - hashicorp/consul/aws
-        - hashicorp/vault/aws
+- name: Onyl use modules created by Hashicorp
+  safeguard: terraform/allowed-modules
+  settings:
+    allowed:
+      - hashicorp/nomad/aws
+      - hashicorp/consul/aws
+      - hashicorp/vault/aws
 ```

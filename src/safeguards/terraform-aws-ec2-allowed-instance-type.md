@@ -20,15 +20,11 @@ To configure the safeguard you must specify the `allowed` setting which should b
 This example will require all EC2 instances provisioned with Terraform to use t2.nano, t2.micro, or t2.small.
 
 ```
-provisioners:
-- source: default/terraform
-
-policies:
-  only-allow-1-vcpu-burstable:
-    safeguard: terraform/aws/allowed-ec2-instance-types
-    settings:
-      allowed:
-      - t2.nano
-      - t2.micro
-      - t2.small
+- name: Only use 1 VCPU burstable EC2 Instance types
+  safeguard: terraform/aws/allowed-ec2-instance-types
+  settings:
+    allowed:
+    - t2.nano
+    - t2.micro
+    - t2.small
 ```
